@@ -5,22 +5,20 @@ from json import load, loads, dumps
 from os import remove, path
 from time import strftime as strf
 
-version = "JNDB v 0.0.1"
-
 #Event Logger
 def event_log(event):
 	with open("event-log.txt", "a") as log:
 		log.write("{} {} -> {}\n".format(strf("%D"), strf("%T"), event))
 
 #Creating a new jndb Database
-#Usage: create(<name of database to create>, <data to save as json>, <password if any>, <indentation to use for JSON output>)
-def create(dbname, dbcontent={}, password=None, indent=4):
+#Usage: write(<name of database to create>, <data to save as json>, <password if any>, <indentation to use for JSON output>)
+def write(dbname, dbcontent={}, password=None, indent=4):
 	if str(type(dbname)) != "<class 'str'>":
-		event_log("Error! Expecting dbname to be of type string")
-		raise Exception("Expecting dbname to be of type string")
+		event_log("Error! Expecting dbname to be of type string in function write")
+		raise Exception("Expecting dbname to be of type string in function write")
 	if str(type(indent)) != "<class 'int'>":
-		event_log("Error! Expecting indent to be of type int")
-		raise Exception("Expecting indent to be of type int")
+		event_log("Error! Expecting indent to be of type int in function write")
+		raise Exception("Expecting indent to be of type int in function write")
 	try:
 		with open(dbname, "w") as db:
 			if password:
@@ -37,8 +35,11 @@ def create(dbname, dbcontent={}, password=None, indent=4):
 #Usage: read(<name of database to read>, <password if any>)
 def read(dbname, password=None):
 	if str(type(dbname)) != "<class 'str'>":
-		event_log("Error! Expecting dbname to be of type string")
-		raise Exception("Expecting dbname to be of type string")
+		event_log("Error! Expecting dbname to be of type string in function read")
+		raise Exception("Expecting dbname to be of type string in function read")
+	if not path.exists(dbname):
+		event_log("Error! {} does not exist when attempting to read".format(dbname))
+		raise Exception("{} does not exist when attempting to read".format(dbname))
 	try:
 		if password:
 			with open(dbname, "r") as db:
@@ -52,7 +53,7 @@ def read(dbname, password=None):
 				event_log("Successfully read {}".format(dbname))
 		return dbcontent
 	except Exception as e:
-		event_log("There was an error reading {} - {}".format(dbname, str(e)))
+		event_log("There was an error reading {}- {}".format(dbname, str(e)))
 		raise Exception("Error reading Database\n~ " + str(e))
 
 #Convert password to an integer
@@ -105,30 +106,32 @@ def decryptdb(dbcontent, password):
 #Usage: find(<database to search>, <value to find>)
 def find(dbcontent, _query):
 	if str(type(dbcontent)) != "<class 'dict'>":
-		event_log("Error! Expecting dbcontent to be of type dict")
-		raise Exception("Expecting dbcontent to be of type dict")
+		event_log("Error! Expecting dbcontent to be of type dict in function find")
+		raise Exception("Expecting dbcontent to be of type dict in function find")
 	keys = []
 	for key in dbcontent.keys():
 		if dbcontent[key] == _query:
 			keys.append(key)
-	event_log("Successfully found {}".format(_query))
 	return keys
 
 #Clone a database (Backing up)
 #Usage: clone(<database to clone>, <name of new cloned database>)
 def clone(source, destination):
 	if str(type(source)) != "<class 'str'>":
-		event_log("Error! Expecting source to be of type string")
-		raise Exception("Expecting source to be of type string")
+		event_log("Error! Expecting source to be of type string in function clone")
+		raise Exception("Expecting source to be of type string in function clone")
 	if str(type(destination)) != "<class 'str'>":
-		event_log("Error! Expecting destination to be of type string")
-		raise Exception("Expecting destination to be of type string")
+		event_log("Error! Expecting destination to be of type string in function clone")
+		raise Exception("Expecting destination to be of type string in function clone")
+	if not path.exists(source):
+		event_log("Error! {} does not exist when attempting to clone".format(source))
+		raise Exception("{} does not exist when attempting to clone".format(source))
 	try:
 		with open (source, "r") as db0:
 			content = db0.read()
 		with open (destination, "w") as db1:
 			db1.write(content)
-		event_log("Successfully Cloned {} to {}".format(source, destination))
+		event_log("Successfully cloned {} to {}".format(source, destination))
 	except Exception as e:
 		event_log("There was an error cloning {} to {} - {}".format(source, destination, str(e)))
 		raise Exception("Error cloning {} to {} - {}".format(source, destination, str(e)))
@@ -137,14 +140,17 @@ def clone(source, destination):
 #Usage: delete(<database to delete>)
 def delete(dbname):
 	if str(type(dbname)) != "<class 'str'>":
-		event_log("Error! Expecting dbname to be of type string")
-		raise Exception("Expecting dbname to be of type string")
+		event_log("Error! Expecting dbname to be of type string in function delete")
+		raise Exception("Expecting dbname to be of type string in function delete")
 	if not path.exists(dbname):
-		event_log("Error! {} does not exist".format(dbname))
-		raise Exception("{} does not exist".format(dbname))
+		event_log("Error! {} does not exist when attempting to delete".format(dbname))
+		raise Exception("{} does not exist when attempting to delete".format(dbname))
 	try:
 		remove(dbname)
 		event_log("Successfully deleted {}".format(dbname))
 	except Exception as e:
 		event_log("There was an error deleting {} - {}".format(dbname, str(e)))
 		raise Exception("Error deleting {} - {}".format(dbname, str(e)))
+
+version = "JNDB v0.0.2"
+event_log("JNDB connected successfully.")

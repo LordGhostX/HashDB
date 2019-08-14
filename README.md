@@ -11,6 +11,8 @@
 
 This library is an implementation for a NOSQL Database using JSON for storing of data.
 
+Check the ChangeLog for info on what has changed.
+
 ## Installation
 Windows / Linux / MAC
 
@@ -109,7 +111,7 @@ JNDB features an Event Logging feature that will record every action taken by a 
 This feature is always active and not called by the user. You can access the log by locating the `event-log.txt`
 
 ## Version
-0.0.1
+0.0.2
 
 ## License
 [**MIT**](https://opensource.org/licenses/MIT)
