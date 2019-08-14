@@ -117,6 +117,37 @@ JNDB features an Event Logging feature that will record every action taken by a 
 
 This feature is always active and not called by the user. You can access the log by locating the `event-log.txt`
 
+## Real-life Usage
+```python
+import hashdb
+
+# Displaying the banner
+hashdb.banner()
+
+# Db Creation
+db = {"Users": [{"Name": "Solomon", "Age": 16, "Alias": "LordGhostX", "Hobbies": "Coding"}]} #Our Sample Database data
+hashdb.write("database1", db) #write() will create database1.hashdb if it does not exist and fill it with our data
+hashdb.write("database2", db, password="ExamplePassword") #Another database with a password
+
+# Loading DB
+print(hashdb.load("database1")) #load() will load a database file
+print(hashdb.load("database2", password="ExamplePassword"))
+
+# Deleting DB
+hashdb.delete("database2") #delete() deletes databases
+
+# DB Cloning
+hashdb.clone("database1", "database1-copy") #clone() creates fresh copies of databases
+
+# Finding Data
+print(hashdb.find(hashdb.load("database1")["Users"][0], "Solomon")) #find() returns a list of all keys with a specific value in a dictionary
+print(hashdb.find(hashdb.load("database1")["Users"][0], "Coding"))
+
+# Saving DB
+hashdb.write("database1", db)
+hashdb.write("database1", db, password="A very secure password")
+```
+
 ## Version
 0.0.3
 
