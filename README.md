@@ -1,13 +1,14 @@
 ```
-
-				██╗███╗   ██╗██████╗ ██████╗
-				██║████╗  ██║██╔══██╗██╔══██╗
-				██║██╔██╗ ██║██║  ██║██████╔╝
-		   ██   ██║██║╚██╗██║██║  ██║██╔══██╗
-		   ╚█████╔╝██║ ╚████║██████╔╝██████╔╝
-			╚════╝ ╚═╝  ╚═══╝╚═════╝ ╚═════╝
+#
+#   ██╗ ██╗  █████╗ ███████╗██╗  ██╗      ██████╗ ██████╗
+#  ████████╗██╔══██╗██╔════╝██║  ██║      ██╔══██╗██╔══██╗
+#  ╚██╔═██╔╝███████║███████╗███████║█████╗██║  ██║██████╔╝
+#  ████████╗██╔══██║╚════██║██╔══██║╚════╝██║  ██║██╔══██╗
+#  ╚██╔═██╔╝██║  ██║███████║██║  ██║      ██████╔╝██████╔╝
+#   ╚═╝ ╚═╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝      ╚═════╝ ╚═════╝
+#                                                                             
 ```
-# JNDB
+# HashDB
 
 This library is an implementation for a NOSQL Database using JSON for storing of data.
 
@@ -22,6 +23,12 @@ On Windows, Linux and MAC, you can install this package easily by placing the py
 * Add the line of code to include JNDB and all its functions
 ```python
 import jndb
+```
+
+## HashDB Banner
+```python
+import hashdb
+hashdb.banner() # This will display HashDB awesome banner! Try it out someday
 ```
 
 ## Features
@@ -111,7 +118,7 @@ JNDB features an Event Logging feature that will record every action taken by a 
 This feature is always active and not called by the user. You can access the log by locating the `event-log.txt`
 
 ## Version
-0.0.2
+0.0.3
 
 ## License
 [**MIT**](https://opensource.org/licenses/MIT)
