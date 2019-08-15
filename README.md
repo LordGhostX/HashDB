@@ -12,6 +12,8 @@
 
 This library is an implementation for a NOSQL Database using JSON for storing of data.
 
+Best for small scale projects
+
 Check the ChangeLog for info on what has changed.
 
 ## Installation
@@ -21,6 +23,11 @@ On Windows, Linux and MAC, you can install this package easily by placing the py
 
 ## Help
 Kindly view the README.html for more info, Thanks!
+
+## TO-DO
+* Upgrade Encryption Format
+* Make available on pip
+* Upgrade querying runtime
 
 ## Version
 0.0.4
