@@ -1,11 +1,12 @@
-#HashDB
-#Author - LordGhostX
+#ASCII ART!
 
 from event_logger import event_log
+from hashlib import sha512
 
 #Convert password to an integer	
 def encpass(password, dbname):
 	password = str(password)
+	password = sha512((password + password + (password[0] * len(password))).encode()).hexdigest()
 	try:
 		tot = 0
 		for p in range(len(password)):
@@ -14,7 +15,7 @@ def encpass(password, dbname):
 		return (tot % 512)
 	except Exception as e:
 		event_log("There was an error parsing given password for DB {} - {}".format(dbname, str(e)), dbname)
-		raise Exception("Error parsing given password\n~ " + str(e))
+		return str(e)
 	
 #Encrypt database if password is given	
 def encryptdb(dbcontent, password, dbname):
@@ -36,12 +37,13 @@ def encryptdb(dbcontent, password, dbname):
 			new_word += ":"
 			current_count = 0
 		return new_word
-	except Exception as e:
-		raise Exception("Error while encrypting DB {}\n~ ".format(dbname) + str(e))
+	except Exception:
+		return "{}"
 	
 #Decrypt database if password is given
 def decryptdb(dbcontent, password, dbname):
 	try:
+		if dbcontent == "{}":	return "{}"
 		values = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144][::-1]
 		keys = list("<~,.?-}[@*|/")
 		key = encpass(password, dbname)
@@ -59,5 +61,5 @@ def decryptdb(dbcontent, password, dbname):
 			new_word += chr(val)
 			index += 1
 		return new_word[::-1]
-	except Exception as e:
-		raise Exception("Error decrypting DB {} possibly due to incorrect password\n~ ".format(dbname) + str(e))
+	except Exception:
+		return "{}"

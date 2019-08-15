@@ -8,7 +8,7 @@ from time import strftime as strf
 def event_log(event, dbname=0):
 	d, t = strf("%D"), strf("%T")
 	if dbname == 0:
-		with open("HashDB-event-log.txt".format(dbname), "a") as log:
+		with open("HashDB-event-log.txt", "a") as log:
 			log.write("{} {} -> {}\n".format(d, t, event))
 	else:
 		with open("{}-event-log.txt".format(dbname), "a") as log:

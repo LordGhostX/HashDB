@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>HashDB</title>
+<title>Docs</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13116,14 +13116,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><h1>HashDB Introduction</h1> <h3>Importing into Python</h3></p>
+<p><h1>HashDB 0.0.4 Introduction</h1> <h3>Importing into Python</h3></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">hashdb</span>
@@ -13137,13 +13137,13 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>Displaying HashDB Banner</h3>
+<h3>HashDB Banner</h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">hashdb</span><span class="o">.</span><span class="n">banner</span><span class="p">()</span>
@@ -13182,39 +13182,16 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>Now let's start with creating some databases, with and without passwords</h3>
+<h3>Displaying HashDB Version</h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Users&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Solomon&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;Alias&quot;</span><span class="p">:</span> <span class="s2">&quot;LordGhostX&quot;</span><span class="p">,</span> <span class="s2">&quot;Hobbies&quot;</span><span class="p">:</span> <span class="s2">&quot;Coding&quot;</span><span class="p">}]}</span> <span class="c1">#Our Sample Database data</span>
-<span class="n">hashdb</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;database1&quot;</span><span class="p">,</span> <span class="n">db</span><span class="p">)</span> <span class="c1">#write() will create database1.hashdb if it does not exist and fill it with our data</span>
-<span class="n">hashdb</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;database2&quot;</span><span class="p">,</span> <span class="n">db</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;ExamplePassword&quot;</span><span class="p">)</span> <span class="c1">#Another database with a password</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3>Now let's print out our data</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">hashdb</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;database1&quot;</span><span class="p">))</span> <span class="c1">#load() will load a database file</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hashdb</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;database2&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;ExamplePassword&quot;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Version - &quot;</span> <span class="o">+</span> <span class="n">hashdb</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13231,8 +13208,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;Users&#39;: [{&#39;Age&#39;: 16, &#39;Alias&#39;: &#39;LordGhostX&#39;, &#39;Hobbies&#39;: &#39;Coding&#39;, &#39;Name&#39;: &#39;Solomon&#39;}]}
-{&#39;Users&#39;: [{&#39;Name&#39;: &#39;Solomon&#39;, &#39;Age&#39;: 16, &#39;Alias&#39;: &#39;LordGhostX&#39;, &#39;Hobbies&#39;: &#39;Coding&#39;}]}
+<pre>Version - HashDB v0.0.4
 </pre>
 </div>
 </div>
@@ -13244,16 +13220,48 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>Right here we have printed our data, let's see what happens when a wrong password is given</h3>
+<h3>Connecting to a Database</h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">hashdb</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;database2&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;WrongPassword&quot;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span> <span class="o">=</span> <span class="n">hashdb</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;sampleDB&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The connect function takes in 2 arguments</p>
+<code>connect(&lt;database name&gt;, &lt;database password&gt;)</code>
+<p>The database password can be omitted when the database is not encrypted and if the database does not exist it will be created</p>
+<p>The database name can be either of type str, int or float</p>
+<p>HashDB has an inbuilt event-logging system. It is discussed about <a href="#event-logging">here</a></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>&gt;&gt;&gt; db = hashdb.connect("sampleDB", password="mydatabasePassword") #This loads an encrypted database supplying the password</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Database State: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">state</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13270,8 +13278,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>source code string cannot contain null bytes
-None
+<pre>Database State: 1
 </pre>
 </div>
 </div>
@@ -13283,27 +13290,16 @@ None
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>We get an error with a wrong password</h3><h3>Now let's delete our database2 and work more with our database1</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hashdb</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s2">&quot;database2&quot;</span><span class="p">)</span> <span class="c1">#delete() deletes databases</span>
-</pre></div>
+<p><p>The database state indicates if the database is newly created or not</p></p>
+<p><p>It returns an integer either <strong>1</strong> showing it is newly created or <strong>0</strong> if it is not.</p>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>I called the delete function to delete our database, let's check if it was really deleted by trying to open it</h3>
+<h3>Fetching DB data</h3>
 </div>
 </div>
 </div>
@@ -13312,121 +13308,7 @@ None
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hashdb</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;database2&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">Exception</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-10-426db8948c4e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>hashdb<span class="ansi-yellow-intense-fg ansi-bold">.</span>load<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#34;database2&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-green-intense-fg ansi-bold">~\Desktop\HashDB\Scripts\reader.py</span> in <span class="ansi-cyan-fg">load</span><span class="ansi-blue-intense-fg ansi-bold">(dbname, password)</span>
-<span class="ansi-green-fg">     16</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> <span class="ansi-green-intense-fg ansi-bold">not</span> path<span class="ansi-yellow-intense-fg ansi-bold">.</span>exists<span class="ansi-yellow-intense-fg ansi-bold">(</span>dbname <span class="ansi-yellow-intense-fg ansi-bold">+</span> <span class="ansi-blue-intense-fg ansi-bold">&#34;.hashdb&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">     17</span>                 event_log<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#34;Error! {} does not exist when attempting to load&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>format<span class="ansi-yellow-intense-fg ansi-bold">(</span>dbname<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 18</span><span class="ansi-yellow-intense-fg ansi-bold">                 </span><span class="ansi-green-intense-fg ansi-bold">raise</span> Exception<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#34;{} does not exist when attempting to load&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>format<span class="ansi-yellow-intense-fg ansi-bold">(</span>dbname<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">     19</span>         <span class="ansi-green-intense-fg ansi-bold">try</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">     20</span>                 <span class="ansi-green-intense-fg ansi-bold">if</span> password<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-
-<span class="ansi-red-intense-fg ansi-bold">Exception</span>: database2 does not exist when attempting to load</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3>We got an Error, database2 does not exist when attempting to load so we know it does not exist any longer</h3> <h3>Let's clone our database1 so we have a fresh copy</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hashdb</span><span class="o">.</span><span class="n">clone</span><span class="p">(</span><span class="s2">&quot;database1&quot;</span><span class="p">,</span> <span class="s2">&quot;database1-copy&quot;</span><span class="p">)</span> <span class="c1">#clone() creates fresh copies of databases</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3>Lets load our cloned copy to see if it exists</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hashdb</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;database1-copy&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[12]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;Users&#39;: [{&#39;Age&#39;: 16,
-   &#39;Alias&#39;: &#39;LordGhostX&#39;,
-   &#39;Hobbies&#39;: &#39;Coding&#39;,
-   &#39;Name&#39;: &#39;Solomon&#39;}]}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3>Nice, everything is working fine ✅</h3> <h3>Let's search our database a bit</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">hashdb</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">hashdb</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;database1&quot;</span><span class="p">)[</span><span class="s2">&quot;Users&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;Solomon&quot;</span><span class="p">))</span> <span class="c1">#find() returns a list of all keys with a specific value in a dictionary</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hashdb</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">hashdb</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;database1&quot;</span><span class="p">)[</span><span class="s2">&quot;Users&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;Coding&quot;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
 </pre></div>
 
     </div>
@@ -13443,8 +13325,7 @@ None
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Name&#39;]
-[&#39;Hobbies&#39;]
+<pre>{}
 </pre>
 </div>
 </div>
@@ -13456,17 +13337,48 @@ None
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>Let's make use of our database data, edit it, update and all other operations</h3>
+<p><p>The get function returns the whole database contents. You can also specify specific tables and table_id's to return</p>
+<code>&gt;&gt;&gt; db.get(table='users') #This returns the contents of table 'users'
+&gt;&gt;&gt; db.get(table='users', id='6742') #This returns the contents of table_id '6742' in table 'users'
+&gt;&gt;&gt; db.get(table='users', id='6742', sort=1) #This returns the contents of the database in ascending order. Passing a negative number returns in descending order</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Creating and Retrieving database tables</h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span> <span class="o">=</span> <span class="n">hashdb</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;database1&quot;</span><span class="p">)</span> <span class="c1">#Save our database in a variable</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="p">)</span> <span class="c1">#Lets see what we have inside here</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span> <span class="c1">#Creates table &#39;users&#39; in the database</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The table function only takes 1 argument which is the table to be created</p>
+<p style="color:red">Please note that creating an existing table overwrites the previous data!</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">tables</span><span class="p">())</span> <span class="c1">#Returns a list of all the tables in the database</span>
 </pre></div>
 
     </div>
@@ -13483,7 +13395,640 @@ None
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;Users&#39;: [{&#39;Age&#39;: 16, &#39;Alias&#39;: &#39;LordGhostX&#39;, &#39;Hobbies&#39;: &#39;Coding&#39;, &#39;Name&#39;: &#39;Solomon&#39;}]}
+<pre>[&#39;users&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The tables command takes no argument</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span> <span class="c1">#Let&#39;s see what we have in our database now</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">table</span><span class="o">=</span><span class="s1">&#39;users&#39;</span><span class="p">))</span> <span class="c1">#Getting the data of table &#39;users&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;users&#39;: {}}
+{}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of tables: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">count</span><span class="p">()))</span> <span class="c1">#Returns the number of tables in the database</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of table_id in table &#39;users&#39;: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">table</span><span class="o">=</span><span class="s1">&#39;users&#39;</span><span class="p">)))</span> <span class="c1">#Returns the number of table_id in table &#39;user&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Number of tables: 1
+Number of table_id in table &#39;users&#39;: 0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Inserting data into tables</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s2">&quot;LordGhostX&quot;</span><span class="p">,</span> <span class="s1">&#39;Hobby&#39;</span><span class="p">:</span> <span class="s1">&#39;Coding&#39;</span><span class="p">,</span> <span class="s1">&#39;Male&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span> <span class="c1">#Insert function</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span> <span class="c1">#Fetch database contents</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;users&#39;: {&#39;id_0&#39;: {&#39;Name&#39;: &#39;LordGhostX&#39;, &#39;Hobby&#39;: &#39;Coding&#39;, &#39;Male&#39;: True}}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><p>The insert function takes 3 arguments</p>
+<code>insert(&lt;table name&gt;, &lt;data to insert&gt;, &lt;table_id&gt;)</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;Solomon&#39;</span><span class="p">})</span> <span class="c1">#Inserting data specifying the table</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;users&#39;: {&#39;id_0&#39;: {&#39;Name&#39;: &#39;LordGhostX&#39;, &#39;Hobby&#39;: &#39;Coding&#39;, &#39;Male&#39;: True}, &#39;id_1&#39;: {&#39;Name&#39;: &#39;Solomon&#39;}}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;Solomon&#39;</span><span class="p">},</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;user_10&quot;</span><span class="p">)</span> <span class="c1">#Inserting data specifying the table and id</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;users&#39;: {&#39;id_0&#39;: {&#39;Name&#39;: &#39;LordGhostX&#39;, &#39;Hobby&#39;: &#39;Coding&#39;, &#39;Male&#39;: True}, &#39;id_1&#39;: {&#39;Name&#39;: &#39;Solomon&#39;}, &#39;user_10&#39;: {&#39;Name&#39;: &#39;Solomon&#39;}}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Updating data in tables</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="s1">&#39;user_10&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Hobby&#39;</span><span class="p">:</span> <span class="s1">&#39;Coding&#39;</span><span class="p">})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="s1">&#39;id_0&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Male&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;users&#39;: {&#39;id_0&#39;: {&#39;Male&#39;: True}, &#39;id_1&#39;: {&#39;Name&#39;: &#39;Solomon&#39;}, &#39;user_10&#39;: {&#39;Hobby&#39;: &#39;Coding&#39;}}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The update function takes 3 arguments</p>
+<code>update(&lt;table name&gt;, &lt;table_id to update&gt;, &lt;data to update&gt;)</code>
+<p style="color:red">Please note that omitting the data to update parameter will make the table_id have an empty value!</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Checking if data exists</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;If table &#39;users&#39; exist: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)))</span> <span class="c1">#Checks if a table exists in the database</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;If table &#39;users&#39; exist: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;users2&#39;</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;If table_id &#39;user_10&#39; in table &#39;users&#39; exist: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="s1">&#39;user_10&#39;</span><span class="p">)))</span> <span class="c1">#Checks if a table_id in a table exists in the database</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;If table_id &#39;user_10&#39; in table &#39;users&#39; exist: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="s1">&#39;user_100&#39;</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>If table &#39;users&#39; exist: True
+If table &#39;users&#39; exist: False
+If table_id &#39;user_10&#39; in table &#39;users&#39; exist: True
+If table_id &#39;user_10&#39; in table &#39;users&#39; exist: False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h3>Overwriting data in the database</h3><p> The overwrite function allows you to overwrite the whole database with your custom python dictionary. Useful in cases where you want a whole different database format other than how HashDB is programmed</p></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;myFirstTable&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;myFirstRow&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;LordGhost&#39;</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;mySecondRow&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;Solomon&#39;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">db</span><span class="o">.</span><span class="n">overwrite</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;myFirstTable&#39;: {&#39;myFirstRow&#39;: {&#39;Name&#39;: &#39;LordGhost&#39;}, &#39;mySecondRow&#39;: {&#39;Name&#39;: &#39;Solomon&#39;}}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;Solomon&#39;</span><span class="p">,</span> <span class="s1">&#39;Hobby&#39;</span><span class="p">:</span> <span class="s1">&#39;Coding&#39;</span><span class="p">}</span>
+<span class="n">db</span><span class="o">.</span><span class="n">overwrite</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;Name&#39;: &#39;Solomon&#39;, &#39;Hobby&#39;: &#39;Coding&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The overwrite function takes only 1 argument which is the data to overwrite the database with</p>
+<p style="color:red">Please note that omitting the data argument in overwrite function will empty the database and also this function can be very dangerous as it is helpful, changing the database format from HashDB format will disable it from using a lot of inbuilt functions!</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h3>Reversing database operations</h3> <p>Supposedly you make a mistake and add or delete data from the database you wish to get back, HashDB has an inbuilt undo function which reverses your last database operation, be careful with its usage as you only have 1 step that you can reverse to</p></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data before Undo: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">()))</span>
+<span class="n">db</span><span class="o">.</span><span class="n">undo</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data after Undo: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">()))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Data before Undo: {&#39;Name&#39;: &#39;Solomon&#39;, &#39;Hobby&#39;: &#39;Coding&#39;}
+Data after Undo: {&#39;myFirstTable&#39;: {&#39;myFirstRow&#39;: {&#39;Name&#39;: &#39;LordGhost&#39;}, &#39;mySecondRow&#39;: {&#39;Name&#39;: &#39;Solomon&#39;}}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we have our previous data back, note that calling undo multiple times following each other will only reverse 1 step, once that step is used up you have to make another change before undo can function again</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Dropping tables and table_id's</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;myFirstTable&#39;: {&#39;myFirstRow&#39;: {&#39;Name&#39;: &#39;LordGhost&#39;}, &#39;mySecondRow&#39;: {&#39;Name&#39;: &#39;Solomon&#39;}}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;myFirstTable&#39;</span><span class="p">,</span> <span class="s1">&#39;mySecondRow&#39;</span><span class="p">)</span> <span class="c1">#Drop the table_id &#39;mySecondRow&#39; in table &#39;myFirstTable&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;myFirstTable&#39;: {&#39;myFirstRow&#39;: {&#39;Name&#39;: &#39;LordGhost&#39;}}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;myFirstTable&#39;</span><span class="p">)</span> <span class="c1">#Drop the table &#39;myFirstTable&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The drop function takes in 2 arguments</p>
+<code>drop(&lt;table to drop&gt;, &lt;table_id to drop&gt;)</code>
+<p style="color:red">Please note that if you omit both the table and id arguments it will clear the database!</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h3>Querying a Database</h3> <p>HashDB supports the following commands for querying a database</p>
+<p><ul>
+    <li>AND</li>
+    <li>NOT</li>
+    <li>LIKE</li>
+    <li>&lt;</li>
+    <li>&gt;</li>
+    <li>OR</li>
+    <li>OR&gt;</li>
+    <li>OR&lt;</li>
+</ul> <p>Let's fill our database with some data first</p></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span>
+<span class="n">db</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;user_1&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;Male&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;Tag&#39;</span><span class="p">:</span> <span class="mi">568</span><span class="p">})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;user_2&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s1">&#39;Male&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;Tag&#39;</span><span class="p">:</span> <span class="mi">923</span><span class="p">})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;user_3&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s1">&#39;Male&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;Tag&#39;</span><span class="p">:</span> <span class="mi">143</span><span class="p">})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;user_4&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">28</span><span class="p">,</span> <span class="s1">&#39;Male&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;Tag&#39;</span><span class="p">:</span> <span class="mi">236</span><span class="p">})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;user_5&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s1">&#39;Male&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;Tag&#39;</span><span class="p">:</span> <span class="mi">527</span><span class="p">})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;user_6&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span> <span class="s1">&#39;Male&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;Tag&#39;</span><span class="p">:</span> <span class="mi">862</span><span class="p">})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;user_7&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;Male&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;Tag&#39;</span><span class="p">:</span> <span class="mi">145</span><span class="p">})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;user_8&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span> <span class="s1">&#39;Male&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;Tag&#39;</span><span class="p">:</span> <span class="mi">264</span><span class="p">})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;user_9&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">28</span><span class="p">,</span> <span class="s1">&#39;Male&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;Tag&#39;</span><span class="p">:</span> <span class="mi">375</span><span class="p">})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;user_10&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">45</span><span class="p">,</span> <span class="s1">&#39;Male&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;Tag&#39;</span><span class="p">:</span> <span class="mi">736</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of Users: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">table</span><span class="o">=</span><span class="s1">&#39;users&#39;</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Number of Users: 10
 </pre>
 </div>
 </div>
@@ -13497,11 +14042,10 @@ None
 <div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="p">[</span><span class="s2">&quot;Users&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Timothy&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span> <span class="s2">&quot;Hobbies&quot;</span><span class="p">:</span> <span class="s2">&quot;Singing&quot;</span><span class="p">,</span> <span class="s2">&quot;Alias&quot;</span><span class="p">:</span> <span class="s2">&quot;Timo&quot;</span><span class="p">})</span> <span class="c1">#Add another user</span>
-<span class="n">db</span><span class="p">[</span><span class="s2">&quot;Users&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Paul&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;Hobbies&quot;</span><span class="p">:</span> <span class="s2">&quot;Playing Football&quot;</span><span class="p">,</span> <span class="s2">&quot;Alias&quot;</span><span class="p">:</span> <span class="s2">&quot;Venom&quot;</span><span class="p">})</span>
-<span class="n">db</span><span class="p">[</span><span class="s2">&quot;Users&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;Hobbies&quot;</span><span class="p">:</span> <span class="s2">&quot;Reading&quot;</span><span class="p">,</span> <span class="s2">&quot;Alias&quot;</span><span class="p">:</span> <span class="s2">&quot;Kvng&quot;</span><span class="p">})</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="p">)</span> <span class="c1">#Lets see what we have now</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">select</span><span class="p">({</span>
+    <span class="s1">&#39;and&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Male&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+<span class="p">},</span> <span class="n">table</span><span class="o">=</span><span class="s1">&#39;users&#39;</span><span class="p">)</span> <span class="c1">#Select all the table_id that have the &#39;Male&#39; value as True</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13518,7 +14062,7 @@ None
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;Users&#39;: [{&#39;Age&#39;: 16, &#39;Alias&#39;: &#39;LordGhostX&#39;, &#39;Hobbies&#39;: &#39;Coding&#39;, &#39;Name&#39;: &#39;Solomon&#39;}, {&#39;Name&#39;: &#39;Timothy&#39;, &#39;Age&#39;: 17, &#39;Hobbies&#39;: &#39;Singing&#39;, &#39;Alias&#39;: &#39;Timo&#39;}, {&#39;Name&#39;: &#39;Paul&#39;, &#39;Age&#39;: 20, &#39;Hobbies&#39;: &#39;Playing Football&#39;, &#39;Alias&#39;: &#39;Venom&#39;}, {&#39;Name&#39;: &#39;John&#39;, &#39;Age&#39;: 25, &#39;Hobbies&#39;: &#39;Reading&#39;, &#39;Alias&#39;: &#39;Kvng&#39;}]}
+<pre>[{&#39;users&#39;: {&#39;id_0&#39;: {&#39;Name&#39;: &#39;user_1&#39;, &#39;Age&#39;: 20, &#39;Male&#39;: True, &#39;Tag&#39;: 568}}}, {&#39;users&#39;: {&#39;id_3&#39;: {&#39;Name&#39;: &#39;user_4&#39;, &#39;Age&#39;: 28, &#39;Male&#39;: True, &#39;Tag&#39;: 236}}}, {&#39;users&#39;: {&#39;id_6&#39;: {&#39;Name&#39;: &#39;user_7&#39;, &#39;Age&#39;: 11, &#39;Male&#39;: True, &#39;Tag&#39;: 145}}}]
 </pre>
 </div>
 </div>
@@ -13532,7 +14076,10 @@ None
 <div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">db</span><span class="p">[</span><span class="s2">&quot;Users&quot;</span><span class="p">]))</span> <span class="c1">#Number of Users in our db</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">select</span><span class="p">({</span>
+    <span class="s1">&#39;not&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Male&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">}</span>
+<span class="p">},</span> <span class="n">table</span><span class="o">=</span><span class="s1">&#39;users&#39;</span><span class="p">)</span> <span class="c1">#Select all the table_id that do not have the &#39;Male&#39; value as False</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13549,7 +14096,75 @@ None
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>4
+<pre>[{&#39;users&#39;: {&#39;id_0&#39;: {&#39;Name&#39;: &#39;user_1&#39;, &#39;Age&#39;: 20, &#39;Male&#39;: True, &#39;Tag&#39;: 568}}}, {&#39;users&#39;: {&#39;id_3&#39;: {&#39;Name&#39;: &#39;user_4&#39;, &#39;Age&#39;: 28, &#39;Male&#39;: True, &#39;Tag&#39;: 236}}}, {&#39;users&#39;: {&#39;id_6&#39;: {&#39;Name&#39;: &#39;user_7&#39;, &#39;Age&#39;: 11, &#39;Male&#39;: True, &#39;Tag&#39;: 145}}}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">select</span><span class="p">({</span>
+    <span class="s1">&#39;&gt;&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">}</span>
+<span class="p">},</span> <span class="n">table</span><span class="o">=</span><span class="s1">&#39;users&#39;</span><span class="p">)</span> <span class="c1">#Select all the table_id that have the &#39;Age&#39; value &gt; 25</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[{&#39;users&#39;: {&#39;id_3&#39;: {&#39;Name&#39;: &#39;user_4&#39;, &#39;Age&#39;: 28, &#39;Male&#39;: True, &#39;Tag&#39;: 236}}}, {&#39;users&#39;: {&#39;id_5&#39;: {&#39;Name&#39;: &#39;user_6&#39;, &#39;Age&#39;: 27, &#39;Male&#39;: False, &#39;Tag&#39;: 862}}}, {&#39;users&#39;: {&#39;id_8&#39;: {&#39;Name&#39;: &#39;user_9&#39;, &#39;Age&#39;: 28, &#39;Male&#39;: False, &#39;Tag&#39;: 375}}}, {&#39;users&#39;: {&#39;id_9&#39;: {&#39;Name&#39;: &#39;user_10&#39;, &#39;Age&#39;: 45, &#39;Male&#39;: False, &#39;Tag&#39;: 736}}}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">select</span><span class="p">({</span>
+    <span class="s1">&#39;&lt;&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">19</span><span class="p">}</span>
+<span class="p">},</span> <span class="n">table</span><span class="o">=</span><span class="s1">&#39;users&#39;</span><span class="p">)</span> <span class="c1">#Select all the table_id that have the &#39;Age&#39; value &lt; 19</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[{&#39;users&#39;: {&#39;id_1&#39;: {&#39;Name&#39;: &#39;user_2&#39;, &#39;Age&#39;: 18, &#39;Male&#39;: False, &#39;Tag&#39;: 923}}}, {&#39;users&#39;: {&#39;id_4&#39;: {&#39;Name&#39;: &#39;user_5&#39;, &#39;Age&#39;: 18, &#39;Male&#39;: False, &#39;Tag&#39;: 527}}}, {&#39;users&#39;: {&#39;id_6&#39;: {&#39;Name&#39;: &#39;user_7&#39;, &#39;Age&#39;: 11, &#39;Male&#39;: True, &#39;Tag&#39;: 145}}}, {&#39;users&#39;: {&#39;id_7&#39;: {&#39;Name&#39;: &#39;user_8&#39;, &#39;Age&#39;: 19, &#39;Male&#39;: False, &#39;Tag&#39;: 264}}}]
 </pre>
 </div>
 </div>
@@ -13561,51 +14176,448 @@ None
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>Let's Just Populate our DB and have 14 Users</h3>
+<p>data = db.select({
+    'and': {'Name': 'user_1'}, 'or': {'Name': 'user_5'}
+}, table='users') #Select all the table_id that have the 'Name' value as 'user_1' OR 'Name' value as 'user_5'
+print(data)</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="s2">&quot;ABCDEFGHIJ&quot;</span><span class="p">):</span>
-    <span class="n">db</span><span class="p">[</span><span class="s2">&quot;Users&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;User-&quot;</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;Hobbies&quot;</span><span class="p">:</span> <span class="s2">&quot;Staying Alive&quot;</span><span class="p">,</span> <span class="s2">&quot;Alias&quot;</span><span class="p">:</span> <span class="s2">&quot;Nicknames&quot;</span><span class="p">})</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">select</span><span class="p">({</span>
+    <span class="s1">&#39;and&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;user_1&#39;</span><span class="p">},</span> <span class="s1">&#39;or&gt;&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Tag&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">}</span>
+<span class="p">},</span> <span class="n">table</span><span class="o">=</span><span class="s1">&#39;users&#39;</span><span class="p">)</span> <span class="c1">#Select all the table_id that have the &#39;Name&#39; value as &#39;user_1&#39; OR &#39;Age&#39; value &gt; 500</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[{&#39;users&#39;: {&#39;id_0&#39;: {&#39;Name&#39;: &#39;user_1&#39;, &#39;Age&#39;: 20, &#39;Male&#39;: True, &#39;Tag&#39;: 568}}}, {&#39;users&#39;: {&#39;id_1&#39;: {&#39;Name&#39;: &#39;user_2&#39;, &#39;Age&#39;: 18, &#39;Male&#39;: False, &#39;Tag&#39;: 923}}}, {&#39;users&#39;: {&#39;id_4&#39;: {&#39;Name&#39;: &#39;user_5&#39;, &#39;Age&#39;: 18, &#39;Male&#39;: False, &#39;Tag&#39;: 527}}}, {&#39;users&#39;: {&#39;id_5&#39;: {&#39;Name&#39;: &#39;user_6&#39;, &#39;Age&#39;: 27, &#39;Male&#39;: False, &#39;Tag&#39;: 862}}}, {&#39;users&#39;: {&#39;id_9&#39;: {&#39;Name&#39;: &#39;user_10&#39;, &#39;Age&#39;: 45, &#39;Male&#39;: False, &#39;Tag&#39;: 736}}}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">select</span><span class="p">({</span>
+    <span class="s1">&#39;and&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;user_1&#39;</span><span class="p">},</span> <span class="s1">&#39;or&lt;&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Tag&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">}</span>
+<span class="p">},</span> <span class="n">table</span><span class="o">=</span><span class="s1">&#39;users&#39;</span><span class="p">)</span> <span class="c1">#Select all the table_id that have the &#39;Name&#39; value as &#39;user_1&#39; OR &#39;Age&#39; value &lt; 300</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[{&#39;users&#39;: {&#39;id_0&#39;: {&#39;Name&#39;: &#39;user_1&#39;, &#39;Age&#39;: 20, &#39;Male&#39;: True, &#39;Tag&#39;: 568}}}, {&#39;users&#39;: {&#39;id_2&#39;: {&#39;Name&#39;: &#39;user_3&#39;, &#39;Age&#39;: 23, &#39;Male&#39;: False, &#39;Tag&#39;: 143}}}, {&#39;users&#39;: {&#39;id_3&#39;: {&#39;Name&#39;: &#39;user_4&#39;, &#39;Age&#39;: 28, &#39;Male&#39;: True, &#39;Tag&#39;: 236}}}, {&#39;users&#39;: {&#39;id_6&#39;: {&#39;Name&#39;: &#39;user_7&#39;, &#39;Age&#39;: 11, &#39;Male&#39;: True, &#39;Tag&#39;: 145}}}, {&#39;users&#39;: {&#39;id_7&#39;: {&#39;Name&#39;: &#39;user_8&#39;, &#39;Age&#39;: 19, &#39;Male&#39;: False, &#39;Tag&#39;: 264}}}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">select</span><span class="p">({</span>
+    <span class="s1">&#39;like&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;_1&#39;</span><span class="p">}</span>
+<span class="p">},</span> <span class="n">table</span><span class="o">=</span><span class="s1">&#39;users&#39;</span><span class="p">)</span> <span class="c1">#Select all the table_id that have the &#39;Name&#39; value like &#39;_1&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[{&#39;users&#39;: {&#39;id_0&#39;: {&#39;Name&#39;: &#39;user_1&#39;, &#39;Age&#39;: 20, &#39;Male&#39;: True, &#39;Tag&#39;: 568}}}, {&#39;users&#39;: {&#39;id_9&#39;: {&#39;Name&#39;: &#39;user_10&#39;, &#39;Age&#39;: 45, &#39;Male&#39;: False, &#39;Tag&#39;: 736}}}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><p>The select function returns a list of matching entities in the format <strong>table -> table_id -> table_id_value</strong></p>
+<code>&gt;&gt;&gt; data = db.select({
+    'or': {'Name': 'user_1', 'Male': True}, 'not': {'Name': 'user_8'}, '&gt;': {'Tag': 500}, '
+}, table='users') #The select function also supports multiple queries; This will return a list of all table_id that have their 'Tag' > 500 OR 'Name' as 'user_1' OR 'Male' as True and will not include anything that has 'Name' as 'user_8'</code></p>
+<p><code>&gt;&gt;&gt; data = db.select({
+    'and': {'Name': 'user_1'}, 'or&lt;': {'Tag': 300}
+}, table=['users', 'customers', 'staff']) #The select function also allows you to specify a list of tables to search from. If this is omitted it will search all the tables in the database</code></p>
+<p><code>&gt;&gt;&gt; data = db.select({
+    'and': {'Name': 'user_1'}, 'or&lt;': {'Tag': 300}
+}, table='users', limit=5) #The select function also allows you to specify a limit to the number of results returned</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h3>Deleting data from the database following a query</h3> <p>HashDB uses the same commands and syntax as the select function to delete data from a database</p></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">delete</span><span class="p">({</span>
+    <span class="s1">&#39;and&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Male&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+<span class="p">},</span> <span class="n">table</span><span class="o">=</span><span class="s1">&#39;users&#39;</span><span class="p">)</span> <span class="c1">#Delete all the table_id that have the &#39;Male&#39; value as True</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+<span class="n">db</span><span class="o">.</span><span class="n">undo</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;users&#39;: {&#39;id_1&#39;: {&#39;Name&#39;: &#39;user_2&#39;, &#39;Age&#39;: 18, &#39;Male&#39;: False, &#39;Tag&#39;: 923}, &#39;id_2&#39;: {&#39;Name&#39;: &#39;user_3&#39;, &#39;Age&#39;: 23, &#39;Male&#39;: False, &#39;Tag&#39;: 143}, &#39;id_4&#39;: {&#39;Name&#39;: &#39;user_5&#39;, &#39;Age&#39;: 18, &#39;Male&#39;: False, &#39;Tag&#39;: 527}, &#39;id_5&#39;: {&#39;Name&#39;: &#39;user_6&#39;, &#39;Age&#39;: 27, &#39;Male&#39;: False, &#39;Tag&#39;: 862}, &#39;id_7&#39;: {&#39;Name&#39;: &#39;user_8&#39;, &#39;Age&#39;: 19, &#39;Male&#39;: False, &#39;Tag&#39;: 264}, &#39;id_8&#39;: {&#39;Name&#39;: &#39;user_9&#39;, &#39;Age&#39;: 28, &#39;Male&#39;: False, &#39;Tag&#39;: 375}, &#39;id_9&#39;: {&#39;Name&#39;: &#39;user_10&#39;, &#39;Age&#39;: 45, &#39;Male&#39;: False, &#39;Tag&#39;: 736}}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">delete</span><span class="p">({</span>
+    <span class="s1">&#39;not&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Male&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">}</span>
+<span class="p">},</span> <span class="n">table</span><span class="o">=</span><span class="s1">&#39;users&#39;</span><span class="p">)</span> <span class="c1">#Delete all the table_id that do not have the &#39;Male&#39; value as False</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+<span class="n">db</span><span class="o">.</span><span class="n">undo</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;users&#39;: {&#39;id_1&#39;: {&#39;Name&#39;: &#39;user_2&#39;, &#39;Age&#39;: 18, &#39;Male&#39;: False, &#39;Tag&#39;: 923}, &#39;id_2&#39;: {&#39;Name&#39;: &#39;user_3&#39;, &#39;Age&#39;: 23, &#39;Male&#39;: False, &#39;Tag&#39;: 143}, &#39;id_4&#39;: {&#39;Name&#39;: &#39;user_5&#39;, &#39;Age&#39;: 18, &#39;Male&#39;: False, &#39;Tag&#39;: 527}, &#39;id_5&#39;: {&#39;Name&#39;: &#39;user_6&#39;, &#39;Age&#39;: 27, &#39;Male&#39;: False, &#39;Tag&#39;: 862}, &#39;id_7&#39;: {&#39;Name&#39;: &#39;user_8&#39;, &#39;Age&#39;: 19, &#39;Male&#39;: False, &#39;Tag&#39;: 264}, &#39;id_8&#39;: {&#39;Name&#39;: &#39;user_9&#39;, &#39;Age&#39;: 28, &#39;Male&#39;: False, &#39;Tag&#39;: 375}, &#39;id_9&#39;: {&#39;Name&#39;: &#39;user_10&#39;, &#39;Age&#39;: 45, &#39;Male&#39;: False, &#39;Tag&#39;: 736}}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">delete</span><span class="p">({</span>
+    <span class="s1">&#39;&gt;&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">}</span>
+<span class="p">},</span> <span class="n">table</span><span class="o">=</span><span class="s1">&#39;users&#39;</span><span class="p">)</span> <span class="c1">#Delete all the table_id that have the &#39;Age&#39; value &gt; 25</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+<span class="n">db</span><span class="o">.</span><span class="n">undo</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;users&#39;: {&#39;id_0&#39;: {&#39;Name&#39;: &#39;user_1&#39;, &#39;Age&#39;: 20, &#39;Male&#39;: True, &#39;Tag&#39;: 568}, &#39;id_1&#39;: {&#39;Name&#39;: &#39;user_2&#39;, &#39;Age&#39;: 18, &#39;Male&#39;: False, &#39;Tag&#39;: 923}, &#39;id_2&#39;: {&#39;Name&#39;: &#39;user_3&#39;, &#39;Age&#39;: 23, &#39;Male&#39;: False, &#39;Tag&#39;: 143}, &#39;id_4&#39;: {&#39;Name&#39;: &#39;user_5&#39;, &#39;Age&#39;: 18, &#39;Male&#39;: False, &#39;Tag&#39;: 527}, &#39;id_6&#39;: {&#39;Name&#39;: &#39;user_7&#39;, &#39;Age&#39;: 11, &#39;Male&#39;: True, &#39;Tag&#39;: 145}, &#39;id_7&#39;: {&#39;Name&#39;: &#39;user_8&#39;, &#39;Age&#39;: 19, &#39;Male&#39;: False, &#39;Tag&#39;: 264}}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">delete</span><span class="p">({</span>
+    <span class="s1">&#39;&lt;&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">19</span><span class="p">}</span>
+<span class="p">},</span> <span class="n">table</span><span class="o">=</span><span class="s1">&#39;users&#39;</span><span class="p">)</span> <span class="c1">#Delete all the table_id that have the &#39;Age&#39; value &lt; 19</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+<span class="n">db</span><span class="o">.</span><span class="n">undo</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;users&#39;: {&#39;id_0&#39;: {&#39;Name&#39;: &#39;user_1&#39;, &#39;Age&#39;: 20, &#39;Male&#39;: True, &#39;Tag&#39;: 568}, &#39;id_2&#39;: {&#39;Name&#39;: &#39;user_3&#39;, &#39;Age&#39;: 23, &#39;Male&#39;: False, &#39;Tag&#39;: 143}, &#39;id_3&#39;: {&#39;Name&#39;: &#39;user_4&#39;, &#39;Age&#39;: 28, &#39;Male&#39;: True, &#39;Tag&#39;: 236}, &#39;id_5&#39;: {&#39;Name&#39;: &#39;user_6&#39;, &#39;Age&#39;: 27, &#39;Male&#39;: False, &#39;Tag&#39;: 862}, &#39;id_8&#39;: {&#39;Name&#39;: &#39;user_9&#39;, &#39;Age&#39;: 28, &#39;Male&#39;: False, &#39;Tag&#39;: 375}, &#39;id_9&#39;: {&#39;Name&#39;: &#39;user_10&#39;, &#39;Age&#39;: 45, &#39;Male&#39;: False, &#39;Tag&#39;: 736}}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">delete</span><span class="p">({</span>
+    <span class="s1">&#39;and&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;user_1&#39;</span><span class="p">},</span> <span class="s1">&#39;or&gt;&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Tag&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">}</span>
+<span class="p">},</span> <span class="n">table</span><span class="o">=</span><span class="s1">&#39;users&#39;</span><span class="p">)</span> <span class="c1">#Delete all the table_id that have the &#39;Name&#39; value as &#39;user_1&#39; OR &#39;Age&#39; value &gt; 500</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+<span class="n">db</span><span class="o">.</span><span class="n">undo</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;users&#39;: {&#39;id_2&#39;: {&#39;Name&#39;: &#39;user_3&#39;, &#39;Age&#39;: 23, &#39;Male&#39;: False, &#39;Tag&#39;: 143}, &#39;id_3&#39;: {&#39;Name&#39;: &#39;user_4&#39;, &#39;Age&#39;: 28, &#39;Male&#39;: True, &#39;Tag&#39;: 236}, &#39;id_6&#39;: {&#39;Name&#39;: &#39;user_7&#39;, &#39;Age&#39;: 11, &#39;Male&#39;: True, &#39;Tag&#39;: 145}, &#39;id_7&#39;: {&#39;Name&#39;: &#39;user_8&#39;, &#39;Age&#39;: 19, &#39;Male&#39;: False, &#39;Tag&#39;: 264}, &#39;id_8&#39;: {&#39;Name&#39;: &#39;user_9&#39;, &#39;Age&#39;: 28, &#39;Male&#39;: False, &#39;Tag&#39;: 375}}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">delete</span><span class="p">({</span>
+    <span class="s1">&#39;and&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;user_1&#39;</span><span class="p">},</span> <span class="s1">&#39;or&lt;&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Tag&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">}</span>
+<span class="p">},</span> <span class="n">table</span><span class="o">=</span><span class="s1">&#39;users&#39;</span><span class="p">)</span> <span class="c1">#Delete all the table_id that have the &#39;Name&#39; value as &#39;user_1&#39; OR &#39;Age&#39; value &lt; 300</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+<span class="n">db</span><span class="o">.</span><span class="n">undo</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;users&#39;: {&#39;id_1&#39;: {&#39;Name&#39;: &#39;user_2&#39;, &#39;Age&#39;: 18, &#39;Male&#39;: False, &#39;Tag&#39;: 923}, &#39;id_4&#39;: {&#39;Name&#39;: &#39;user_5&#39;, &#39;Age&#39;: 18, &#39;Male&#39;: False, &#39;Tag&#39;: 527}, &#39;id_5&#39;: {&#39;Name&#39;: &#39;user_6&#39;, &#39;Age&#39;: 27, &#39;Male&#39;: False, &#39;Tag&#39;: 862}, &#39;id_8&#39;: {&#39;Name&#39;: &#39;user_9&#39;, &#39;Age&#39;: 28, &#39;Male&#39;: False, &#39;Tag&#39;: 375}, &#39;id_9&#39;: {&#39;Name&#39;: &#39;user_10&#39;, &#39;Age&#39;: 45, &#39;Male&#39;: False, &#39;Tag&#39;: 736}}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">delete</span><span class="p">({</span>
+    <span class="s1">&#39;like&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;_1&#39;</span><span class="p">}</span>
+<span class="p">},</span> <span class="n">table</span><span class="o">=</span><span class="s1">&#39;users&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+<span class="n">db</span><span class="o">.</span><span class="n">undo</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;users&#39;: {&#39;id_1&#39;: {&#39;Name&#39;: &#39;user_2&#39;, &#39;Age&#39;: 18, &#39;Male&#39;: False, &#39;Tag&#39;: 923}, &#39;id_2&#39;: {&#39;Name&#39;: &#39;user_3&#39;, &#39;Age&#39;: 23, &#39;Male&#39;: False, &#39;Tag&#39;: 143}, &#39;id_3&#39;: {&#39;Name&#39;: &#39;user_4&#39;, &#39;Age&#39;: 28, &#39;Male&#39;: True, &#39;Tag&#39;: 236}, &#39;id_4&#39;: {&#39;Name&#39;: &#39;user_5&#39;, &#39;Age&#39;: 18, &#39;Male&#39;: False, &#39;Tag&#39;: 527}, &#39;id_5&#39;: {&#39;Name&#39;: &#39;user_6&#39;, &#39;Age&#39;: 27, &#39;Male&#39;: False, &#39;Tag&#39;: 862}, &#39;id_6&#39;: {&#39;Name&#39;: &#39;user_7&#39;, &#39;Age&#39;: 11, &#39;Male&#39;: True, &#39;Tag&#39;: 145}, &#39;id_7&#39;: {&#39;Name&#39;: &#39;user_8&#39;, &#39;Age&#39;: 19, &#39;Male&#39;: False, &#39;Tag&#39;: 264}, &#39;id_8&#39;: {&#39;Name&#39;: &#39;user_9&#39;, &#39;Age&#39;: 28, &#39;Male&#39;: False, &#39;Tag&#39;: 375}}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The delete function removes all the table_id matching the given query</p>
+<code>&gt;&gt;&gt; db.delete({
+    'or': {'Name': 'user_1', 'Male': True}, 'not': {'Name': 'user_8'}, '&gt;': {'Tag': 500}, '
+}, table='users') #The delete function also supports multiple queries; This will remove all the table_id matching the given query</code>
+
+<code>&gt;&gt;&gt; db.delete({
+    'and': {'Name': 'user_1'}, 'or&lt;': {'Tag': 300}
+}, table=['users', 'customers', 'staff']) #The delete function also allows you to specify a list of tables to delete from. If this is omitted it will delete from all the tables in the database</code>
+
+<p>The delete function does not support the limit parameter</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Saving a database to disk</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">password</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The save function accepts 2 arguments</p>
+<p>save(&lt;database password&gt;, &lt;prettify database&gt;)</p>
+<p>The database password is the password to be used to encrypt the database, if this value is omitted the database will not be encrypted but stored in plain text</p>
+<p>prettify database accepts a boolean; If set to True the saved database will be in a prettified JSON format. If set to false it will not be prettified; If this value is omitted it will be stored in prettified JSON; The prettify only works for unencrypted databases</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Cloning a database</h3>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">db</span><span class="p">[</span><span class="s2">&quot;Users&quot;</span><span class="p">]))</span> <span class="c1">#Number of Users in our db</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">clone</span><span class="p">(</span><span class="s2">&quot;database-2&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>14
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13613,7 +14625,15 @@ None
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>At this point i think we should save our database</h3>
+<p>The clone function only accepts one argument which will be the name of the new database</p><p>Please note that the name of the new database can't be the same name as the current working database and only saved databases can be cloned; The clone duplicates the .hashdb in the disk along with any form of encryption it may have and not duplicate what you have not saved</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h3>Disconnecting from a database</h3> <p>Previously we connected to our database to access HashDB functions to work with it, it would also be nice if we can disconnect too</p></p>
+
 </div>
 </div>
 </div>
@@ -13622,41 +14642,10 @@ None
 <div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hashdb</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;database1&quot;</span><span class="p">,</span> <span class="n">db</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">disconnect</span><span class="p">(</span><span class="n">password</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="p">[</span><span class="s2">&quot;Users&quot;</span><span class="p">])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[{&#39;Age&#39;: 16, &#39;Alias&#39;: &#39;LordGhostX&#39;, &#39;Hobbies&#39;: &#39;Coding&#39;, &#39;Name&#39;: &#39;Solomon&#39;}, {&#39;Age&#39;: 17, &#39;Alias&#39;: &#39;Timo&#39;, &#39;Hobbies&#39;: &#39;Singing&#39;, &#39;Name&#39;: &#39;Timothy&#39;}, {&#39;Age&#39;: 20, &#39;Alias&#39;: &#39;Venom&#39;, &#39;Hobbies&#39;: &#39;Playing Football&#39;, &#39;Name&#39;: &#39;Paul&#39;}, {&#39;Age&#39;: 25, &#39;Alias&#39;: &#39;Kvng&#39;, &#39;Hobbies&#39;: &#39;Reading&#39;, &#39;Name&#39;: &#39;John&#39;}, {&#39;Age&#39;: 20, &#39;Alias&#39;: &#39;Nicknames&#39;, &#39;Hobbies&#39;: &#39;Staying Alive&#39;, &#39;Name&#39;: &#39;User-A&#39;}, {&#39;Age&#39;: 20, &#39;Alias&#39;: &#39;Nicknames&#39;, &#39;Hobbies&#39;: &#39;Staying Alive&#39;, &#39;Name&#39;: &#39;User-B&#39;}, {&#39;Age&#39;: 20, &#39;Alias&#39;: &#39;Nicknames&#39;, &#39;Hobbies&#39;: &#39;Staying Alive&#39;, &#39;Name&#39;: &#39;User-C&#39;}, {&#39;Age&#39;: 20, &#39;Alias&#39;: &#39;Nicknames&#39;, &#39;Hobbies&#39;: &#39;Staying Alive&#39;, &#39;Name&#39;: &#39;User-D&#39;}, {&#39;Age&#39;: 20, &#39;Alias&#39;: &#39;Nicknames&#39;, &#39;Hobbies&#39;: &#39;Staying Alive&#39;, &#39;Name&#39;: &#39;User-E&#39;}, {&#39;Age&#39;: 20, &#39;Alias&#39;: &#39;Nicknames&#39;, &#39;Hobbies&#39;: &#39;Staying Alive&#39;, &#39;Name&#39;: &#39;User-F&#39;}, {&#39;Age&#39;: 20, &#39;Alias&#39;: &#39;Nicknames&#39;, &#39;Hobbies&#39;: &#39;Staying Alive&#39;, &#39;Name&#39;: &#39;User-G&#39;}, {&#39;Age&#39;: 20, &#39;Alias&#39;: &#39;Nicknames&#39;, &#39;Hobbies&#39;: &#39;Staying Alive&#39;, &#39;Name&#39;: &#39;User-H&#39;}, {&#39;Age&#39;: 20, &#39;Alias&#39;: &#39;Nicknames&#39;, &#39;Hobbies&#39;: &#39;Staying Alive&#39;, &#39;Name&#39;: &#39;User-I&#39;}, {&#39;Age&#39;: 20, &#39;Alias&#39;: &#39;Nicknames&#39;, &#39;Hobbies&#39;: &#39;Staying Alive&#39;, &#39;Name&#39;: &#39;User-J&#39;}]
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13664,16 +14653,29 @@ None
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>Let me save our database with a password and say Goodnight here</h3>
+<p>The disconnect accepts 3 arguments</p>
+<code>disconnect(&lt;save database&gt;, &lt;password&gt;, &lt;prettify database&gt;)</code>
+<p>The save database parameter accepts a boolean whether to save the database before disconnecting or not. The default value is True</p>
+<p>The password is used to specify the password to encrypt the database with when saving. If omitted no password will be used</p>
+<p>The prettify database is used to prettify unencrypted databases making their JSON beautiful; The default value is True</p>
+<p>Once a database has been disconnected you can no longer interact with it anymore, you have to connect again</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h3>Creating new databases</h3><p>HashDB also allows you to create a JSON database without connecting to it. This is done with the create function</p></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hashdb</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;database1&quot;</span><span class="p">,</span> <span class="n">db</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;A very secure password&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hashdb</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;new-database&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;LordGhost&quot;</span><span class="p">,</span> <span class="s2">&quot;Hobby&quot;</span><span class="p">:</span> <span class="s2">&quot;Coding&quot;</span><span class="p">},</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13684,45 +14686,32 @@ None
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1>Well that's all for now!</h1>
+<p>The create function accepts 3 arguments</p>
+<code>create(&lt;new database name&gt;, &lt;data to save&gt;, &lt;password&gt;)</code>
+<p>The new database name parameter allows you to specify the name of the new database</p>
+<p>The data to save parameter allows you to save custom json to the newly created database; if this is omitted it will create an empty database</p>
+<p>The password parameter allows you to specify a password to be used to save the database</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>Wanna see something scary?</h3>
+<p><h3>Destroying Databases</h3><p>HashDB allows for the destruction of databases. When a database is destroyed, the local file will be permanently deleted but the event-log will br retained</p></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;database1.hashdb&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">db</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">db</span> <span class="o">=</span> <span class="n">hashdb</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;new-database&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="p">)</span>
+<span class="n">db</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;~,.?-}[@*|/&lt;.-|:&lt;~,.?-}[@*|/&lt;-@|:&lt;~,.?-}[@*|/&lt;.-@:&lt;~,.?-}[@*|/~-[*:&lt;~,.?-}[@*|/&lt;|:&lt;~,.?-}[@*|/~?[*:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;?}*:&lt;~,.?-}[@*|/&lt;.}@|:&lt;~,.?-}[@*|/&lt;-@|:&lt;~,.?-}[@*|/~?[|:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/~.-|:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/&lt;.@|:&lt;~,.?-}[@*|/&lt;.-:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/&lt;-[:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/~.}:&lt;~,.?-}[@*|/~-@:&lt;~,.?-}[@*|/&lt;?@:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;?}|:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/~.-:&lt;~,.?-}[@*|/~-*:&lt;~,.?-}[@*|/&lt;?}@:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/&lt;.-[|:&lt;~,.?-}[@*|/&lt;?}|:&lt;~,.?-}[@*|/&lt;.-@:&lt;~,.?-}[@*|/&lt;-[:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/~?@:&lt;~,.?-}[@*|/~.-@|:&lt;~,.?-}[@*|/~?}@|:&lt;~,.?-}[@*|/&lt;,:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;.-:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;-[*:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/~.-@|:&lt;~,.?-}[@*|/~-[|:&lt;~,.?-}[@*|/~-:&lt;~,.?-}[@*|/~?[:&lt;~,.?-}[@*|/~?|:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;?}*:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;?}:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;-*:&lt;~,.?-}[@*|/~?}@:&lt;~,.?-}[@*|/~?[:&lt;~,.?-}[@*|/~.-[|:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/&lt;,*:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;?[|:&lt;~,.?-}[@*|/&lt;?}*:&lt;~,.?-}[@*|/~.}*:&lt;~,.?-}[@*|/~-[|:&lt;~,.?-}[@*|/~-:&lt;~,.?-}[@*|/~?[:&lt;~,.?-}[@*|/~?}*:&lt;~,.?-}[@*|/~.:&lt;~,.?-}[@*|/~-@|:&lt;~,.?-}[@*|/~.}*:&lt;~,.?-}[@*|/~?[:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/&lt;:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/&lt;,[:&lt;~,.?-}[@*|/~?@|:&lt;~,.?-}[@*|/~.@|:&lt;~,.?-}[@*|/&lt;,}*:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/&lt;-*:&lt;~,.?-}[@*|/~.}|:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/&lt;?@:&lt;~,.?-}[@*|/&lt;.[:&lt;~,.?-}[@*|/&lt;}*:&lt;~,.?-}[@*|/~-[*:&lt;~,.?-}[@*|/~-|:&lt;~,.?-}[@*|/~.[*:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/&lt;?}*:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;?}:&lt;~,.?-}[@*|/&lt;}@:&lt;~,.?-}[@*|/~?[*:&lt;~,.?-}[@*|/~?|:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/~?}*:&lt;~,.?-}[@*|/&lt;.[:&lt;~,.?-}[@*|/&lt;,*:&lt;~,.?-}[@*|/&lt;.}@:&lt;~,.?-}[@*|/&lt;.-*:&lt;~,.?-}[@*|/&lt;[*:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/&lt;?@|:&lt;~,.?-}[@*|/&lt;?}@|:&lt;~,.?-}[@*|/&lt;?}:&lt;~,.?-}[@*|/&lt;.}@|:&lt;~,.?-}[@*|/&lt;?*:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;}@:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/~-@|:&lt;~,.?-}[@*|/~.}*:&lt;~,.?-}[@*|/~?[:&lt;~,.?-}[@*|/&lt;.-|:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;.-*:&lt;~,.?-}[@*|/&lt;}@:&lt;~,.?-}[@*|/~.:&lt;~,.?-}[@*|/~?[*:&lt;~,.?-}[@*|/~.[*:&lt;~,.?-}[@*|/~.@:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/&lt;?@:&lt;~,.?-}[@*|/&lt;?}@|:&lt;~,.?-}[@*|/&lt;?|:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/&lt;?[|:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/&lt;}:&lt;~,.?-}[@*|/~?@|:&lt;~,.?-}[@*|/~-[|:&lt;~,.?-}[@*|/~.}@|:&lt;~,.?-}[@*|/~?[*:&lt;~,.?-}[@*|/&lt;.-@:&lt;~,.?-}[@*|/&lt;?}@|:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;.}@|:&lt;~,.?-}[@*|/&lt;@|:&lt;~,.?-}[@*|/~.:&lt;~,.?-}[@*|/~?[*:&lt;~,.?-}[@*|/~.[*:&lt;~,.?-}[@*|/~.}@|:&lt;~,.?-}[@*|/~?[|:&lt;~,.?-}[@*|/~}*:&lt;~,.?-}[@*|/~.@:&lt;~,.?-}[@*|/~-[|:&lt;~,.?-}[@*|/&lt;?[|:&lt;~,.?-}[@*|/&lt;?}|:&lt;~,.?-}[@*|/~.-|:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/&lt;.-[|:&lt;~,.?-}[@*|/~-[:&lt;~,.?-}[@*|/~?}*:&lt;~,.?-}[@*|/&lt;,@:&lt;~,.?-}[@*|/~?[*:&lt;~,.?-}[@*|/&lt;[*:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/&lt;.-@|:&lt;~,.?-}[@*|/&lt;.[:&lt;~,.?-}[@*|/&lt;.-[*:&lt;~,.?-}[@*|/&lt;?@|:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/&lt;|:&lt;~,.?-}[@*|/~-@:&lt;~,.?-}[@*|/&lt;?@:&lt;~,.?-}[@*|/&lt;?}@|:&lt;~,.?-}[@*|/&lt;?|:&lt;~,.?-}[@*|/&lt;@|:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/~-*:&lt;~,.?-}[@*|/~?[*:&lt;~,.?-}[@*|/~?@:&lt;~,.?-}[@*|/&lt;?}@:&lt;~,.?-}[@*|/&lt;.-@:&lt;~,.?-}[@*|/&lt;.@|:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;.-|:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;,[|:&lt;~,.?-}[@*|/&lt;.@|:&lt;~,.?-}[@*|/&lt;,@:&lt;~,.?-}[@*|/&lt;?[:&lt;~,.?-}[@*|/~-@:&lt;~,.?-}[@*|/~}*:&lt;~,.?-}[@*|/~.@:&lt;~,.?-}[@*|/~-[|:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;?[*:&lt;~,.?-}[@*|/&lt;?}@|:&lt;~,.?-}[@*|/&lt;?[|:&lt;~,.?-}[@*|/&lt;?[*:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;@|:&lt;~,.?-}[@*|/~?[|:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/~.:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/&lt;.-[:&lt;~,.?-}[@*|/&lt;.[:&lt;~,.?-}[@*|/&lt;.-|:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/&lt;.-@|:&lt;~,.?-}[@*|/&lt;.-*:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;?[|:&lt;~,.?-}[@*|/&lt;|:&lt;~,.?-}[@*|/~-[:&lt;~,.?-}[@*|/~}@|:&lt;~,.?-}[@*|/~.[:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;?[:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;.[:&lt;~,.?-}[@*|/~.-[:&lt;~,.?-}[@*|/~?[|:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/~.:&lt;~,.?-}[@*|/~.[:&lt;~,.?-}[@*|/~.}:&lt;~,.?-}[@*|/~?@|:&lt;~,.?-}[@*|/~.-[:&lt;~,.?-}[@*|/~.:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;.}@:&lt;~,.?-}[@*|/&lt;}:&lt;~,.?-}[@*|/~-@:&lt;~,.?-}[@*|/&lt;.}@|:&lt;~,.?-}[@*|/~}@:&lt;~,.?-}[@*|/~?@:&lt;~,.?-}[@*|/&lt;.-@|:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/~.-[*:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;?}@:&lt;~,.?-}[@*|/&lt;.-:&lt;~,.?-}[@*|/&lt;-[:&lt;~,.?-}[@*|/~?[*:&lt;~,.?-}[@*|/~?|:&lt;~,.?-}[@*|/~.-*:&lt;~,.?-}[@*|/~?}*:&lt;~,.?-}[@*|/&lt;.[:&lt;~,.?-}[@*|/&lt;.-|:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/&lt;-[|:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/~-@|:&lt;~,.?-}[@*|/&lt;?@|:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;?}*:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/~.-|:&lt;~,.?-}[@*|/~-@:&lt;~,.?-}[@*|/&lt;?}@|:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/&lt;.-[*:&lt;~,.?-}[@*|/&lt;?}*:&lt;~,.?-}[@*|/&lt;.-@|:&lt;~,.?-}[@*|/&lt;-[|:&lt;~,.?-}[@*|/~?}*:&lt;~,.?-}[@*|/~?@|:&lt;~,.?-}[@*|/~.-[:&lt;~,.?-}[@*|/~.:&lt;~,.?-}[@*|/&lt;,|:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;.-|:&lt;~,.?-}[@*|/&lt;-[*:&lt;~,.?-}[@*|/&lt;?:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/~.-[:&lt;~,.?-}[@*|/~-[*:&lt;~,.?-}[@*|/~-|:&lt;~,.?-}[@*|/~?[|:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/&lt;.}@:&lt;~,.?-}[@*|/&lt;?}@:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;?}|:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;-@:&lt;~,.?-}[@*|/~?}@|:&lt;~,.?-}[@*|/~?[|:&lt;~,.?-}[@*|/~.-[*:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/&lt;,@:&lt;~,.?-}[@*|/&lt;-[|:&lt;~,.?-}[@*|/&lt;?[*:&lt;~,.?-}[@*|/&lt;?}@:&lt;~,.?-}[@*|/~.}@:&lt;~,.?-}[@*|/~-[*:&lt;~,.?-}[@*|/~-|:&lt;~,.?-}[@*|/~?[|:&lt;~,.?-}[@*|/~?}@:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/~-[:&lt;~,.?-}[@*|/~.}@:&lt;~,.?-}[@*|/~?[|:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;.@|:&lt;~,.?-}[@*|/&lt;|:&lt;~,.?-}[@*|/~?}*:&lt;~,.?-}[@*|/&lt;,[|:&lt;~,.?-}[@*|/~?[:&lt;~,.?-}[@*|/~.[:&lt;~,.?-}[@*|/&lt;,}@:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/&lt;-:&lt;~,.?-}[@*|/~?|:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/&lt;?@|:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;}@:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/~-*:&lt;~,.?-}[@*|/~.}:&lt;~,.?-}[@*|/~?@:&lt;~,.?-}[@*|/&lt;?}@:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;?}|:&lt;~,.?-}[@*|/&lt;}@|:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/~?}@:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;,@:&lt;~,.?-}[@*|/&lt;.}@|:&lt;~,.?-}[@*|/&lt;.-@:&lt;~,.?-}[@*|/&lt;}:&lt;~,.?-}[@*|/~}|:&lt;~,.?-}[@*|/&lt;?[:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/&lt;?}|:&lt;~,.?-}[@*|/&lt;.-:&lt;~,.?-}[@*|/&lt;?@:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;}@|:&lt;~,.?-}[@*|/~?@:&lt;~,.?-}[@*|/~-[:&lt;~,.?-}[@*|/~.}@:&lt;~,.?-}[@*|/~?[|:&lt;~,.?-}[@*|/&lt;.-*:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/&lt;.-@:&lt;~,.?-}[@*|/&lt;}@|:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/~.}:&lt;~,.?-}[@*|/~-@:&lt;~,.?-}[@*|/&lt;.@|:&lt;~,.?-}[@*|/&lt;?@|:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/&lt;?*:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;?[*:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;}|:&lt;~,.?-}[@*|/~?[:&lt;~,.?-}[@*|/~-[*:&lt;~,.?-}[@*|/~.-:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/&lt;.-@|:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;.-:&lt;~,.?-}[@*|/&lt;[:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/~.}:&lt;~,.?-}[@*|/~?@|:&lt;~,.?-}[@*|/~?[*:&lt;~,.?-}[@*|/~}@:&lt;~,.?-}[@*|/~.@|:&lt;~,.?-}[@*|/~-[*:&lt;~,.?-}[@*|/&lt;?[*:&lt;~,.?-}[@*|/&lt;?}*:&lt;~,.?-}[@*|/~.-*:&lt;~,.?-}[@*|/~?@:&lt;~,.?-}[@*|/&lt;.-[*:&lt;~,.?-}[@*|/~-[|:&lt;~,.?-}[@*|/~?}@:&lt;~,.?-}[@*|/&lt;,@|:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/&lt;[:&lt;~,.?-}[@*|/~.@:&lt;~,.?-}[@*|/&lt;.-[:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;,:&lt;~,.?-}[@*|/&lt;?[:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/~-@|:&lt;~,.?-}[@*|/&lt;?@|:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/&lt;?*:&lt;~,.?-}[@*|/&lt;[:&lt;~,.?-}[@*|/~?|:&lt;~,.?-}[@*|/~-@:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/~?@|:&lt;~,.?-}[@*|/&lt;?}@|:&lt;~,.?-}[@*|/&lt;.-@|:&lt;~,.?-}[@*|/&lt;.[:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;|:&lt;~,.?-}[@*|/~?@:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;.-*:&lt;~,.?-}[@*|/&lt;.}@:&lt;~,.?-}[@*|/&lt;,[*:&lt;~,.?-}[@*|/&lt;.[:&lt;~,.?-}[@*|/&lt;,@|:&lt;~,.?-}[@*|/&lt;[:&lt;~,.?-}[@*|/~-@|:&lt;~,.?-}[@*|/~}@:&lt;~,.?-}[@*|/~.@|:&lt;~,.?-}[@*|/~-[*:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;?}:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/&lt;?[*:&lt;~,.?-}[@*|/&lt;?}:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;[:&lt;~,.?-}[@*|/~?[*:&lt;~,.?-}[@*|/~?|:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/~?}*:&lt;~,.?-}[@*|/&lt;.-[|:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;.-*:&lt;~,.?-}[@*|/&lt;.@|:&lt;~,.?-}[@*|/&lt;.-[:&lt;~,.?-}[@*|/&lt;.-@:&lt;~,.?-}[@*|/&lt;?:&lt;~,.?-}[@*|/&lt;?[*:&lt;~,.?-}[@*|/&lt;*:&lt;~,.?-}[@*|/~-[|:&lt;~,.?-}[@*|/~-:&lt;~,.?-}[@*|/~.[|:&lt;~,.?-}[@*|/~?|:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;?[|:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/~.-[|:&lt;~,.?-}[@*|/~?[*:&lt;~,.?-}[@*|/~?|:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/~.[|:&lt;~,.?-}[@*|/~.}|:&lt;~,.?-}[@*|/~?[:&lt;~,.?-}[@*|/~.-[|:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;.}@|:&lt;~,.?-}[@*|/~.}:&lt;~,.?-}[@*|/~-@|:&lt;~,.?-}[@*|/&lt;.-:&lt;~,.?-}[@*|/~}@|:&lt;~,.?-}[@*|/~?@|:&lt;~,.?-}[@*|/&lt;.-[:&lt;~,.?-}[@*|/~?|:&lt;~,.?-}[@*|/~.-[:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/&lt;.}@:&lt;~,.?-}[@*|/&lt;?}@|:&lt;~,.?-}[@*|/&lt;.-|:&lt;~,.?-}[@*|/&lt;-[|:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/~.-@:&lt;~,.?-}[@*|/~?}@:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;.-*:&lt;~,.?-}[@*|/&lt;.@|:&lt;~,.?-}[@*|/&lt;-[*:&lt;~,.?-}[@*|/~.@:&lt;~,.?-}[@*|/~}|:&lt;~,.?-}[@*|/~?|:&lt;~,.?-}[@*|/~-[:&lt;~,.?-}[@*|/&lt;?[:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;?}@:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/~.-*:&lt;~,.?-}[@*|/~-@|:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;.@|:&lt;~,.?-}[@*|/&lt;,:&lt;~,.?-}[@*|/&lt;?}@:&lt;~,.?-}[@*|/&lt;.-[:&lt;~,.?-}[@*|/&lt;-[*:&lt;~,.?-}[@*|/~?}@:&lt;~,.?-}[@*|/~?[:&lt;~,.?-}[@*|/~.-[|:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/&lt;,*:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;?[|:&lt;~,.?-}[@*|/&lt;?:&lt;~,.?-}[@*|/&lt;?|:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/~.-[|:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/~-*:&lt;~,.?-}[@*|/~?[*:&lt;~,.?-}[@*|/~?@:&lt;~,.?-}[@*|/&lt;.}@|:&lt;~,.?-}[@*|/&lt;?}@|:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;?}*:&lt;~,.?-}[@*|/&lt;.}@:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;-@|:&lt;~,.?-}[@*|/~.:&lt;~,.?-}[@*|/~?[*:&lt;~,.?-}[@*|/&lt;:&lt;~,.?-}[@*|/~.@:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/&lt;-[*:&lt;~,.?-}[@*|/&lt;?}:&lt;~,.?-}[@*|/&lt;?}@|:&lt;~,.?-}[@*|/~.}@|:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/~-*:&lt;~,.?-}[@*|/~?[*:&lt;~,.?-}[@*|/~?}@|:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/~-[|:&lt;~,.?-}[@*|/~.}@|:&lt;~,.?-}[@*|/~?[*:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/&lt;.[:&lt;~,.?-}[@*|/&lt;*:&lt;~,.?-}[@*|/~?}@:&lt;~,.?-}[@*|/&lt;,[*:&lt;~,.?-}[@*|/~?[|:&lt;~,.?-}[@*|/~.[|:&lt;~,.?-}[@*|/&lt;,}@|:&lt;~,.?-}[@*|/~.@:&lt;~,.?-}[@*|/~.}*:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/&lt;.@|:&lt;~,.?-}[@*|/&lt;?[:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;}@|:&lt;~,.?-}[@*|/~?|:&lt;~,.?-}[@*|/~-@:&lt;~,.?-}[@*|/~.}|:&lt;~,.?-}[@*|/~?@|:&lt;~,.?-}[@*|/&lt;?}@|:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;?}*:&lt;~,.?-}[@*|/&lt;-:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/~?@:&lt;~,.?-}[@*|/~.@:&lt;~,.?-}[@*|/~?}@|:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;,@|:&lt;~,.?-}[@*|/&lt;.-:&lt;~,.?-}[@*|/&lt;.-@|:&lt;~,.?-}[@*|/~.}:&lt;~,.?-}[@*|/~}*:&lt;~,.?-}[@*|/&lt;?[|:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;?}*:&lt;~,.?-}[@*|/&lt;.-|:&lt;~,.?-}[@*|/&lt;?@|:&lt;~,.?-}[@*|/&lt;.}@:&lt;~,.?-}[@*|/&lt;-:&lt;~,.?-}[@*|/~?@|:&lt;~,.?-}[@*|/~-[|:&lt;~,.?-}[@*|/~.}@|:&lt;~,.?-}[@*|/~?[*:&lt;~,.?-}[@*|/&lt;.-@:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/&lt;.-@|:&lt;~,.?-}[@*|/&lt;-:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/~-@|:&lt;~,.?-}[@*|/&lt;.[:&lt;~,.?-}[@*|/&lt;?[:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;?@:&lt;~,.?-}[@*|/&lt;.@|:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/&lt;?}:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/&lt;}*:&lt;~,.?-}[@*|/~?[|:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/~.-|:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/&lt;.-[:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;.-|:&lt;~,.?-}[@*|/&lt;[|:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/~?[:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/~}@|:&lt;~,.?-}[@*|/~.[:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/&lt;?}:&lt;~,.?-}[@*|/&lt;?}@:&lt;~,.?-}[@*|/~.-@:&lt;~,.?-}[@*|/~?@|:&lt;~,.?-}[@*|/&lt;,:&lt;~,.?-}[@*|/~-[*:&lt;~,.?-}[@*|/~?}@|:&lt;~,.?-}[@*|/&lt;,[:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/&lt;@:&lt;~,.?-}[@*|/~.@|:&lt;~,.?-}[@*|/&lt;.-[|:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;,|:&lt;~,.?-}[@*|/&lt;?[|:&lt;~,.?-}[@*|/~.@:&lt;~,.?-}[@*|/~}|:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/~-[:&lt;~,.?-}[@*|/&lt;?[:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;?@:&lt;~,.?-}[@*|/&lt;[|:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/~-@|:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/~?[:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/&lt;.-[:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;*:&lt;~,.?-}[@*|/~?@|:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;.-@:&lt;~,.?-}[@*|/&lt;.}@|:&lt;~,.?-}[@*|/&lt;,}:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;.@|:&lt;~,.?-}[@*|/&lt;[|:&lt;~,.?-}[@*|/~-[:&lt;~,.?-}[@*|/~}@|:&lt;~,.?-}[@*|/~.[:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;?}|:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;?}:&lt;~,.?-}[@*|/&lt;?}|:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;[|:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/~?}@:&lt;~,.?-}[@*|/&lt;.-[*:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;.-@:&lt;~,.?-}[@*|/&lt;.[:&lt;~,.?-}[@*|/&lt;.-[|:&lt;~,.?-}[@*|/&lt;?}:&lt;~,.?-}[@*|/&lt;?|:&lt;~,.?-}[@*|/&lt;?}:&lt;~,.?-}[@*|/&lt;@:&lt;~,.?-}[@*|/~-[*:&lt;~,.?-}[@*|/~-|:&lt;~,.?-}[@*|/~.[*:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/&lt;.}@:&lt;~,.?-}[@*|/&lt;?[*:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/~.-[*:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/~.[*:&lt;~,.?-}[@*|/~.}*:&lt;~,.?-}[@*|/~?[|:&lt;~,.?-}[@*|/~.-[*:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;?@|:&lt;~,.?-}[@*|/~.}|:&lt;~,.?-}[@*|/~-[:&lt;~,.?-}[@*|/&lt;.-|:&lt;~,.?-}[@*|/~-:&lt;~,.?-}[@*|/~?[:&lt;~,.?-}[@*|/&lt;.-[|:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/~.-@:&lt;~,.?-}[@*|/~?}*:&lt;~,.?-}[@*|/&lt;.}@|:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/&lt;.-*:&lt;~,.?-}[@*|/&lt;-[*:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/~?@:&lt;~,.?-}[@*|/~.-@|:&lt;~,.?-}[@*|/~?}@|:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;.-@:&lt;~,.?-}[@*|/&lt;.[:&lt;~,.?-}[@*|/&lt;?:&lt;~,.?-}[@*|/~-@:&lt;~,.?-}[@*|/~}*:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/~-[|:&lt;~,.?-}[@*|/&lt;?[|:&lt;~,.?-}[@*|/&lt;.}@:&lt;~,.?-}[@*|/&lt;?}@|:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/~.-@:&lt;~,.?-}[@*|/~-[:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;.[:&lt;~,.?-}[@*|/&lt;,|:&lt;~,.?-}[@*|/&lt;?}@|:&lt;~,.?-}[@*|/&lt;.-[|:&lt;~,.?-}[@*|/&lt;?:&lt;~,.?-}[@*|/~?}@|:&lt;~,.?-}[@*|/~?[|:&lt;~,.?-}[@*|/~.-[*:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/&lt;,@:&lt;~,.?-}[@*|/&lt;?*:&lt;~,.?-}[@*|/&lt;?[*:&lt;~,.?-}[@*|/&lt;?|:&lt;~,.?-}[@*|/&lt;?*:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/~.-[*:&lt;~,.?-}[@*|/~?|:&lt;~,.?-}[@*|/~-@:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/~?@|:&lt;~,.?-}[@*|/&lt;.-:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;?}@:&lt;~,.?-}[@*|/&lt;.}@|:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;-[:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/&lt;|:&lt;~,.?-}[@*|/~-@:&lt;~,.?-}[@*|/&lt;.@|:&lt;~,.?-}[@*|/&lt;?:&lt;~,.?-}[@*|/&lt;?}|:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/~.-:&lt;~,.?-}[@*|/~?|:&lt;~,.?-}[@*|/~-@:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/~.:&lt;~,.?-}[@*|/~.@:&lt;~,.?-}[@*|/~-[*:&lt;~,.?-}[@*|/~.-:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;@:&lt;~,.?-}[@*|/~?}@|:&lt;~,.?-}[@*|/&lt;,}:&lt;~,.?-}[@*|/~?[*:&lt;~,.?-}[@*|/~.[*:&lt;~,.?-}[@*|/&lt;,-:&lt;~,.?-}[@*|/~-@:&lt;~,.?-}[@*|/&lt;?}@|:&lt;~,.?-}[@*|/&lt;?[*:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/&lt;:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/~-*:&lt;~,.?-}[@*|/~.}:&lt;~,.?-}[@*|/~?@:&lt;~,.?-}[@*|/&lt;?}@:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;?}|:&lt;~,.?-}[@*|/&lt;}@|:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/~?}@:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;.-@:&lt;~,.?-}[@*|/&lt;.}@|:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;?*:&lt;~,.?-}[@*|/&lt;[:&lt;~,.?-}[@*|/~-[:&lt;~,.?-}[@*|/~}@|:&lt;~,.?-}[@*|/~.[:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;?}|:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;?}:&lt;~,.?-}[@*|/&lt;?}|:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;[|:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/~?}@:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;.-@:&lt;~,.?-}[@*|/&lt;,@|:&lt;~,.?-}[@*|/&lt;-@|:&lt;~,.?-}[@*|/~.@:&lt;~,.?-}[@*|/~}|:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/~-[:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;?*:&lt;~,.?-}[@*|/&lt;?}@:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/~.-*:&lt;~,.?-}[@*|/~?@:&lt;~,.?-}[@*|/~-[:&lt;~,.?-}[@*|/~?}*:&lt;~,.?-}[@*|/~.[*:&lt;~,.?-}[@*|/~.[:&lt;~,.?-}[@*|/~?|:&lt;~,.?-}[@*|/~.-*:&lt;~,.?-}[@*|/~?}*:&lt;~,.?-}[@*|/&lt;.[:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;[:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/&lt;,}*:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/&lt;.-|:&lt;~,.?-}[@*|/~-[:&lt;~,.?-}[@*|/&lt;?}@|:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;?@:&lt;~,.?-}[@*|/&lt;}:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/~-@|:&lt;~,.?-}[@*|/~.}*:&lt;~,.?-}[@*|/~?[:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;?}@:&lt;~,.?-}[@*|/&lt;-|:&lt;~,.?-}[@*|/~?}*:&lt;~,.?-}[@*|/~?@|:&lt;~,.?-}[@*|/~.@|:&lt;~,.?-}[@*|/~.:&lt;~,.?-}[@*|/&lt;.-*:&lt;~,.?-}[@*|/&lt;.-@:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;-[*:&lt;~,.?-}[@*|/&lt;.[:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/~.-@|:&lt;~,.?-}[@*|/~-|:&lt;~,.?-}[@*|/&lt;?}*:&lt;~,.?-}[@*|/&lt;.[:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;.-[:&lt;~,.?-}[@*|/&lt;?}:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;-|:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/~.-@:&lt;~,.?-}[@*|/~?}@:&lt;~,.?-}[@*|/&lt;.-[*:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;.}@|:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;?}@|:&lt;~,.?-}[@*|/~.-@:&lt;~,.?-}[@*|/~-[:&lt;~,.?-}[@*|/~}@|:&lt;~,.?-}[@*|/~?@|:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;?}@:&lt;~,.?-}[@*|/&lt;-[:&lt;~,.?-}[@*|/~?[|:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/~.-|:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/&lt;.-[:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;.-|:&lt;~,.?-}[@*|/&lt;[|:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/~?[:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/~}@|:&lt;~,.?-}[@*|/~.[:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/&lt;?}:&lt;~,.?-}[@*|/&lt;?}@:&lt;~,.?-}[@*|/~.-@:&lt;~,.?-}[@*|/~?@|:&lt;~,.?-}[@*|/&lt;,:&lt;~,.?-}[@*|/~-[*:&lt;~,.?-}[@*|/~?}@|:&lt;~,.?-}[@*|/&lt;,[:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/&lt;,@:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;,:&lt;~,.?-}[@*|/&lt;.-@|:&lt;~,.?-}[@*|/&lt;.-@:&lt;~,.?-}[@*|/&lt;.-:&lt;~,.?-}[@*|/&lt;?[|:&lt;~,.?-}[@*|/~-@:&lt;~,.?-}[@*|/~}*:&lt;~,.?-}[@*|/~.@:&lt;~,.?-}[@*|/~-[|:&lt;~,.?-}[@*|/&lt;?[|:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/&lt;?@|:&lt;~,.?-}[@*|/&lt;[*:&lt;~,.?-}[@*|/~?@:&lt;~,.?-}[@*|/~-[:&lt;~,.?-}[@*|/~?}*:&lt;~,.?-}[@*|/~?[|:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/&lt;.}@:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;.-|:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;?*:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/&lt;|:&lt;~,.?-}[@*|/~-@:&lt;~,.?-}[@*|/&lt;.@|:&lt;~,.?-}[@*|/&lt;?@|:&lt;~,.?-}[@*|/&lt;?}|:&lt;~,.?-}[@*|/&lt;?@:&lt;~,.?-}[@*|/&lt;?@|:&lt;~,.?-}[@*|/&lt;.[:&lt;~,.?-}[@*|/&lt;|:&lt;~,.?-}[@*|/~?@:&lt;~,.?-}[@*|/~-[:&lt;~,.?-}[@*|/~?}*:&lt;~,.?-}[@*|/~?[|:&lt;~,.?-}[@*|/&lt;.}@:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;?:&lt;~,.?-}[@*|/~?}@:&lt;~,.?-}[@*|/~?[:&lt;~,.?-}[@*|/~.-[|:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/&lt;,*:&lt;~,.?-}[@*|/&lt;.[|:&lt;~,.?-}[@*|/&lt;?[|:&lt;~,.?-}[@*|/&lt;?}*:&lt;~,.?-}[@*|/~.}*:&lt;~,.?-}[@*|/~-[|:&lt;~,.?-}[@*|/~-:&lt;~,.?-}[@*|/~?[:&lt;~,.?-}[@*|/~.@|:&lt;~,.?-}[@*|/~?}@|:&lt;~,.?-}[@*|/~-@|:&lt;~,.?-}[@*|/~.}*:&lt;~,.?-}[@*|/~?[:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/&lt;:&lt;~,.?-}[@*|/~?}|:&lt;~,.?-}[@*|/&lt;,[:&lt;~,.?-}[@*|/~?@|:&lt;~,.?-}[@*|/~.@|:&lt;~,.?-}[@*|/&lt;,}*:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/&lt;.-[:&lt;~,.?-}[@*|/&lt;.-[*:&lt;~,.?-}[@*|/&lt;?}*:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/&lt;?}@:&lt;~,.?-}[@*|/&lt;.*:&lt;~,.?-}[@*|/&lt;}|:&lt;~,.?-}[@*|/~?:&lt;~,.?-}[@*|/~-*:&lt;~,.?-}[@*|/~.}:&lt;~,.?-}[@*|/~?@:&lt;~,.?-}[@*|/&lt;?}@:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/&lt;?}|:&lt;~,.?-}[@*|/&lt;}@|:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/~?}@:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;.-@:&lt;~,.?-}[@*|/&lt;.}@|:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;.-[*:&lt;~,.?-}[@*|/~.}*:&lt;~,.?-}[@*|/~-@|:&lt;~,.?-}[@*|/~}@:&lt;~,.?-}[@*|/~.@|:&lt;~,.?-}[@*|/~-[*:&lt;~,.?-}[@*|/&lt;.}:&lt;~,.?-}[@*|/&lt;?}:&lt;~,.?-}[@*|/&lt;.:&lt;~,.?-}[@*|/&lt;?[*:&lt;~,.?-}[@*|/&lt;?}:&lt;~,.?-}[@*|/&lt;.}|:&lt;~,.?-}[@*|/&lt;[:&lt;~,.?-}[@*|/~?[*:&lt;~,.?-}[@*|/~?|:&lt;~,.?-}[@*|/~.|:&lt;~,.?-}[@*|/~?}*:&lt;~,.?-}[@*|/&lt;?[:&lt;~,.?-}[@*|/&lt;,:&lt;~,.?-}[@*|/&lt;,:&lt;~,.?-}[@*|/&lt;.-[:&lt;~,.?-}[@*|/&lt;.}@|:&lt;~,.?-}[@*|/&lt;-|:&lt;~,.?-}[@*|/&lt;?|:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/&lt;.|:&lt;~,.?-}[@*|/&lt;|:&lt;~,.?-}[@*|/~-[*:&lt;~,.?-}[@*|/~-|:&lt;~,.?-}[@*|/~.[*:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/&lt;.}@:&lt;~,.?-}[@*|/&lt;?[*:&lt;~,.?-}[@*|/&lt;.@:&lt;~,.?-}[@*|/&lt;.[*:&lt;~,.?-}[@*|/~.-[*:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/~.-:&lt;~,.?-}[@*|/~.}|:&lt;~,.?-}[@*|/~?[|:&lt;~,.?-}[@*|/~.-[*:&lt;~,.?-}[@*|/~.*:&lt;~,.?-}[@*|/&lt;.}*:&lt;~,.?-}[@*|/&lt;?@|:&lt;~,.?-}[@*|/~.}|:&lt;~,.?-}[@*|/~-[:&lt;~,.?-}[@*|/&lt;.-|:&lt;~,.?-}[@*|/&lt;-@|:&lt;~,.?-}[@*|/~-|:&lt;~,.?-}[@*|/~.[*:&lt;~,.?-}[@*|/~?*:&lt;~,.?-}[@*|/&lt;.}@:&lt;~,.?-}[@*|/&lt;.}@:&lt;~,.?-}[@*|/&lt;?}@|:&lt;~,.?-}[@*|/&lt;.-|:&lt;~,.?-}[@*|/&lt;-[|:&lt;~,.?-}[@*|/~?}:&lt;~,.?-}[@*|/&lt;,@|:
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13730,7 +14719,24 @@ None
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>Yup! That's our DB when encrypted</h3>
+<p>the destroy function takes no arguments</p>
+<p style="color:red">Note that this action is not reversible!</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h3 id="event-logging">Event Logging</h3><p>Every action performed on the database is stored in the event-log txt file, you can locate this file in your working directory and it is named in the format "&lt;database name&gt;-event-log.txt"</p></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><p>Example of Event Log</p><img src="img/screenshot.JPG"></p>
+
 </div>
 </div>
 </div>
