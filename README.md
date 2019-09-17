@@ -22,7 +22,7 @@ Windows / Linux / MAC
 On Windows, Linux and MAC, you can install this package easily by placing the py file in your project folder (not available via pip)
 
 ## Help
-Kindly view the README.html for more info, Thanks!
+Kindly view the README.html for more info or visit the Github page [here](https://lordghostx.github.io/HashDB/README.html), Thanks!
 
 ## TO-DO
 * Upgrade Encryption Format
